@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 5 : Styliser les images</title>
+    <style>
+        /* 🎯 EXERCICE 5 : Rendre les images plus jolies
+        
+        OBJECTIF : Apprendre à styliser les images
+        
+        INSTRUCTIONS :
+        1. Centre l'image avec display: block; et margin: 20px auto;
+        2. Limite la largeur de l'image à 400px maximum avec max-width: 400px;
+        3. Garde les proportions de l'image avec height: auto;
+        4. Ajoute une bordure arrondie avec border-radius: 15px;
+        5. Ajoute une ombre avec box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        
+        BONUS : Fais en sorte que l'image s'agrandisse légèrement au survol
+        Utilise : img:hover { transform: scale(1.05); transition: 0.3s; }
+        */
+        
+        body {
+            background-color: #e8f4f8;
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        
+        /* Écris ton code pour img ici */
+        img {
+            margin: auto;
+            display: block;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,3);
+
+            &:hover { transform: scale(1.05); transition: 0.3s; }
+        }
+
+        .zoom:hover { transform: scale(1.05); transition: 0.3s; }
+        /* BONUS : Écris le code pour img:hover ici */
+        
+    </style>
+</head>
+<body>
+    <h1 class="zoom"> 🎮 Mon jeu préféré : Minecraft</h1>
+    <img class="zoom" src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_Minecraft_image1600w.jpg"
+         alt="Minecraft">
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-06-formulaire.html">➡️ Exercice suivant : Styliser un formulaire</a></p>
+</body>
+</html>

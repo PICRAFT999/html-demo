@@ -1,0 +1,7 @@
+body {
+    background-image: linear-gradient(to right, blue, pink);
+    border: solid;
+}
+
+git config --global user.email "raphael.borrits@gmail.com"
+git config --global user.name picraft999

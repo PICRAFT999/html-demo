@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 3 : Styliser les listes</title>
+    <style>
+        /* 🎯 EXERCICE 3 : Styliser les listes
+        
+        OBJECTIF : Apprendre à rendre les listes plus jolies
+        
+        INSTRUCTIONS :
+        1. Change la couleur de fond de la liste ul en jaune clair (lightyellow)
+        2. Enlève les puces des items de liste avec list-style-type: none;
+        3. Ajoute un espace autour de chaque item li avec padding: 5px;
+        4. Ajoute une bordure à chaque item avec border: 1px solid gray;
+        5. Ajoute un peu d'espace entre chaque bordure avec margin: 5px;
+        
+        BONUS : Change le curseur en pointeur quand on survole un item
+        Utilise : li:hover { cursor: pointer; }
+        */
+        
+        h2 {
+            color: #2E8B57;
+            text-align: center;
+        }
+        
+        /* Écris ton code ici pour la liste ul */
+        .Y {
+            background-color: lightyellow;
+            list-style-type: none;
+        }
+        li {
+          padding: 5px; 
+          border: 1px solid gray; 
+          margin: 5px;
+          cursor: pointer;
+        }
+        /* Écris ton code ici pour les items li */
+        
+        /* BONUS : Écris le code pour li:hover ici */
+        
+    </style>
+    
+</head>
+<body>
+    <h2>📝 Étapes pour survivre dans Minecraft</h2>
+    <ul class="Y">
+        <li>Couper du bois</li>
+        <li>Faire une table de craft</li>
+        <li>Faire une pioche en bois</li>
+        <li>Miner de la pierre</li>
+        <li>Construire un abri</li>
+    </ul>
+    
+    <hr>
+    <p><a href="exercice-04-tableau.html">➡️ Exercice suivant : Styliser un tableau</a></p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4 : Styliser un tableau</title>
+    <style>
+        /* 🎯 EXERCICE 4 : Rendre un tableau plus beau
+        
+        OBJECTIF : Apprendre à styliser les tableaux
+        
+        INSTRUCTIONS :
+        1. Centre le tableau sur la page avec margin: 20px auto;
+        2. Ajoute des bordures au tableau avec border-collapse: collapse;
+        3. Pour th et td, ajoute :
+           - border: 1px solid black;
+           - padding: 10px;
+           - text-align: left;
+        4. Donne un fond bleu clair aux en-têtes (th)
+        5. Fais en sorte que les lignes du tbody changent de couleur au survol
+           Utilise : tbody tr:hover { background-color: #f0f0f0; }
+        */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        /* Écris ton code pour table ici */
+        .l {
+           margin: 20px auto;
+           border-collapse: collapse;
+        }
+        
+        /* Écris ton code pour th et td ici */
+        th {
+           border: 1px solid black;
+           padding: 10px;
+           text-align: left;
+           background-color: lightblue;
+        }
+        td {
+           border: 1px solid black;
+           padding: 10px;
+           text-align: left;
+        }
+        /* Écris ton code pour th ici */
+
+        /* BONUS : Écris le code pour tbody tr:hover ici */
+        tbody {
+           tr:hover {
+            background-color: #e40606;
+           }
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>⛏️ Outils Minecraft et leurs utilisations</h2>
+    <table class="l">
+        <thead>
+            <tr>
+                <th>Outil</th>
+                <th>Matériau</th>
+                <th>Utilisation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pioche</td>
+                <td>Pierre</td>
+                <td>Miner des blocs</td>
+            </tr>
+            <tr>
+                <td>Hache</td>
+                <td>Bois</td>
+                <td>Couper du bois</td>
+            </tr>
+            <tr>
+                <td>Pelle</td>
+                <td>Fer</td>
+                <td>Creuser la terre</td>
+            </tr>
+            <tr>
+                <td>Épée</td>
+                <td>Diamant</td>
+                <td>Combattre</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-05-images.html">➡️ Exercice suivant : Styliser les images</a></p>
+</body>
+</html>

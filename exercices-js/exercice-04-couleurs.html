@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 4 : Changer les couleurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 50px;
+        }
+        .boutons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        .instructions {
+            background-color: rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        #carre {
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            border-radius: 20px;
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎨 Exercice 4 : Changer les couleurs</h1>
+    
+    <div class="instructions">
+        <h3>📝 Instructions :</h3>
+        <p>1. Change la couleur de fond de la page avec <code>document.body.style.backgroundColor</code></p>
+        <p>2. Change la couleur du carré avec <code>element.style.backgroundColor</code></p>
+        <p>3. Change la couleur du texte si besoin pour qu'il reste lisible</p>
+        <p><strong>Bonus :</strong> Génère une couleur aléatoire avec le bouton "Aléatoire" !</p>
+    </div>
+    
+    <div id="carre"></div>
+    
+    <div class="boutons">
+        <button id="btnRouge" style="background-color: #e74c3c; color: white;">🔴 Rouge</button>
+        <button id="btnBleu" style="background-color: #3498db; color: white;">🔵 Bleu</button>
+        <button id="btnVert" style="background-color: #2ecc71; color: white;">🟢 Vert</button>
+        <button id="btnJaune" style="background-color: #f39c12; color: white;">🟡 Jaune</button>
+        <button id="btnAleatoire" style="background-color: #95a5a6; color: white;">🎲 Aléatoire</button>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 4 : Manipuler les styles
+        
+        OBJECTIF : Apprendre à changer les styles CSS avec JavaScript
+        
+        AIDE :
+        - Pour changer le fond de la page : document.body.style.backgroundColor = "red";
+        - Pour changer un élément : element.style.backgroundColor = "blue";
+        - Pour la couleur du texte : document.body.style.color = "white";
+        
+        BONUS - Couleur aléatoire :
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        let couleur = "rgb(" + r + "," + g + "," + b + ")";
+        
+        Écris ton code ci-dessous :
+        */
+        
+        // Bouton Rouge
+        document.querySelector('#btnRouge').addEventListener('click', function() {
+            // Change le fond en rouge
+            
+            // Change le carré en rouge foncé
+            
+        });
+        
+        // Bouton Bleu
+        
+        
+        // Bouton Vert
+        
+        
+        // Bouton Jaune
+        
+        
+        // BONUS : Bouton Aléatoire
+        
+        
+    </script>
+    
+    <hr>
+    <p><a href="exercice-05-compteur.html">➡️ Exercice suivant : Compteur</a></p>
+</body>
+</html>

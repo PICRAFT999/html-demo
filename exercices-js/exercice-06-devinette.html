@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 6 : Jeu de devinette</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        .container {
+            background-color: rgba(255,255,255,0.2);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 30px auto;
+            backdrop-filter: blur(10px);
+        }
+        input {
+            padding: 15px;
+            font-size: 24px;
+            width: 200px;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 15px 40px;
+            font-size: 20px;
+            margin: 20px 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: white;
+            color: #f5576c;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        #message {
+            font-size: 32px;
+            margin: 30px 0;
+            font-weight: bold;
+            min-height: 50px;
+        }
+        #tentatives {
+            font-size: 20px;
+            margin: 20px 0;
+        }
+        .instructions {
+            background-color: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎯 Exercice 6 : Jeu de devinette</h1>
+    
+    <div class="instructions">
+        <h3>📝 Instructions :</h3>
+        <p>1. L'ordinateur choisit un nombre aléatoire entre 1 et 100</p>
+        <p>2. Le joueur entre un nombre et clique sur "Deviner"</p>
+        <p>3. Affiche "Trop grand !" ou "Trop petit !" selon le cas</p>
+        <p>4. Affiche "Bravo !" si le joueur trouve le bon nombre</p>
+        <p>5. Compte le nombre de tentatives</p>
+        <p>6. Le bouton "Rejouer" génère un nouveau nombre</p>
+    </div>
+    
+    <div class="container">
+        <h2>Devine le nombre entre 1 et 100 !</h2>
+        
+        <input type="number" id="nombre" placeholder="?" min="1" max="100">
+        <br>
+        <button id="btnDeviner">Deviner</button>
+        <button id="btnRejouer">🔄 Rejouer</button>
+        
+        <div id="message"></div>
+        <div id="tentatives">Tentatives : 0</div>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 6 : Conditions et comparaisons
+        
+        OBJECTIF : Apprendre à utiliser les conditions if/else
+        
+        AIDE :
+        - Nombre aléatoire : Math.floor(Math.random() * 100) + 1;
+        - Récupérer l'input : parseInt(document.querySelector('#nombre').value)
+        
+        - Conditions :
+        if (nombreJoueur > nombreSecret) {
+            // Trop grand
+        } else if (nombreJoueur < nombreSecret) {
+            // Trop petit
+        } else {
+            // Trouvé !
+        }
+        
+        Écris ton code ci-dessous :
+        */
+        
+        // Variables globales
+        let nombreSecret;
+        let nombreTentatives = 0;
+        
+        // Fonction pour démarrer/redémarrer le jeu
+        function nouveauJeu() {
+            // Génère un nombre aléatoire entre 1 et 100
+            
+            // Réinitialise les tentatives
+            
+            // Réinitialise l'affichage
+            
+        }
+        
+        // Fonction pour deviner
+        document.querySelector('#btnDeviner').addEventListener('click', function() {
+            // Récupère le nombre du joueur
+            
+            // Augmente le nombre de tentatives
+            
+            // Compare avec le nombre secret
+            
+            // Affiche le message approprié
+            
+            // Affiche le nombre de tentatives
+            
+        });
+        
+        // Bouton Rejouer
+        document.querySelector('#btnRejouer').addEventListener('click', function() {
+            nouveauJeu();
+        });
+        
+        // Démarre le jeu au chargement de la page
+        nouveauJeu();
+        
+    </script>
+    
+    <hr>
+    <p><a href="exercice-07-todo-list.html" style="color: white;">➡️ Exercice suivant : Liste de tâches</a></p>
+</body>
+</html>

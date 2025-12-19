@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 5 : Compteur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to bottom, #00b4db, #0083b0);
+            color: white;
+            min-height: 100vh;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        #compteur {
+            font-size: 120px;
+            font-weight: bold;
+            margin: 50px 0;
+            text-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        #btnPlus {
+            background-color: #2ecc71;
+            color: white;
+        }
+        #btnMoins {
+            background-color: #e74c3c;
+            color: white;
+        }
+        #btnReset {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .instructions {
+            background-color: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔢 Exercice 5 : Compteur</h1>
+    
+    <div class="instructions">
+        <h3>📝 Instructions :</h3>
+        <p>1. Crée une variable <code>compteur</code> initialisée à 0</p>
+        <p>2. Bouton + : augmente le compteur de 1 et affiche-le</p>
+        <p>3. Bouton - : diminue le compteur de 1 et affiche-le</p>
+        <p>4. Bouton Reset : remet le compteur à 0</p>
+        <p><strong>Bonus :</strong> Change la couleur du compteur si > 0 (vert) ou < 0 (rouge)</p>
+    </div>
+    
+    <div id="compteur">0</div>
+    
+    <button id="btnMoins">➖ Moins</button>
+    <button id="btnReset">🔄 Reset</button>
+    <button id="btnPlus">➕ Plus</button>
+    
+    <script>
+        /* 🎯 EXERCICE 5 : Incrémenter et décrémenter
+        
+        OBJECTIF : Apprendre à modifier une variable et mettre à jour l'affichage
+        
+        AIDE :
+        - Crée une variable : let compteur = 0;
+        - Pour augmenter : compteur = compteur + 1; (ou compteur++)
+        - Pour diminuer : compteur = compteur - 1; (ou compteur--)
+        - Pour afficher : document.querySelector('#compteur').innerHTML = compteur;
+        
+        BONUS - Changer la couleur :
+        if (compteur > 0) {
+            document.querySelector('#compteur').style.color = "lightgreen";
+        } else if (compteur < 0) {
+            document.querySelector('#compteur').style.color = "#ff6b6b";
+        } else {
+            document.querySelector('#compteur').style.color = "white";
+        }
+        
+        Écris ton code ci-dessous :
+        */
+        
+        // 1. Crée la variable compteur
+        let compteur = 0;
+        
+        // 2. Fonction pour mettre à jour l'affichage
+        function afficherCompteur() {
+            // Affiche le compteur
+            
+            // BONUS : Change la couleur selon la valeur
+            
+        }
+        
+        // 3. Bouton Plus
+        
+        
+        // 4. Bouton Moins
+        
+        
+        // 5. Bouton Reset
+        
+        
+    </script>
+    
+    <hr>
+    <p><a href="exercice-06-devinette.html" style="color: white;">➡️ Exercice suivant : Jeu de devinette</a></p>
+</body>
+</html>

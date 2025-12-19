@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 1 : Premiers pas avec JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .instructions {
+            background-color: #e8f4f8;
+            padding: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+        }
+        #resultat {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 Exercice 1 : Premiers pas avec JavaScript</h1>
+    
+    <div class="instructions">
+        <h3>📝 Instructions :</h3>
+        <p>1. Crée une variable <code>nom</code> avec ton prénom</p>
+        <p>2. Crée une variable <code>age</code> avec ton âge</p>
+        <p>3. Crée une variable <code>jeuPrefere</code> avec le nom de ton jeu préféré</p>
+        <p>4. Affiche un message dans la div #resultat avec ces informations</p>
+        <p>5. Utilise <code>console.log()</code> pour afficher les variables dans la console</p>
+    </div>
+    
+    <div id="resultat">
+        <p><em>Ton résultat apparaîtra ici...</em></p>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 1 : Variables et affichage
+        
+        OBJECTIF : Apprendre à créer des variables et afficher du contenu
+        
+        AIDE :
+        - Pour créer une variable : let nom = "Alice";
+        - Pour afficher dans la console : console.;
+        - Pour afficher dans la page : document.querySelector('#resultat').innerHTML = "Texte";
+        - Pour concaténer : "Bonjour " + nom + " !"log(nom)
+        
+        // Écris ton code ci-dessous :
+        
+        // 1. Crée tes variables ici :// */
+        let prennom = "Raphaël";
+        let nom = "Borrits"
+
+        // 2. Affiche dans la console
+        console.log(nom)
+        
+        // 3. Crée un message et affiche-le dans #resultat
+        document.querySelector('#resultat').innerHTML = nom + " " + prennom // "Raphaël Borrits"
+    </script>
+    
+    <hr>
+    <p><a href="exercice-02-boutons.html">➡️ Exercice suivant : Boutons et événements</a></p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 8 : Flexbox - Disposition en ligne</title>
+    <style>
+        /* 🎯 EXERCICE 8 : Introduction à Flexbox
+        
+        OBJECTIF : Apprendre à disposer les éléments en ligne avec Flexbox
+        
+        INSTRUCTIONS :
+        Flexbox permet de disposer les éléments facilement en ligne ou en colonne.
+        
+        1. Pour le .conteneur, ajoute :
+           - display: flex;
+           - justify-content: space-around;  (pour espacer les éléments)
+           - flex-wrap: wrap;  (pour que ça passe à la ligne si besoin)
+           - gap: 20px;  (espace entre les éléments)
+        
+        2. Pour .item, ajoute :
+           - background-color: #4CAF50;
+           - color: white;
+           - padding: 20px;
+           - border-radius: 10px;
+           - width: 150px;
+           - text-align: center;
+        
+        3. Ajoute un effet au survol :
+           .item:hover { transform: translateY(-5px); transition: 0.3s; }
+        */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+        }
+        /* Écris ton code pour .conteneur ici */
+        .conteneur {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        /* Écris ton code pour .item ici */
+        .item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+            text-align: center;
+        }    
+        /* Écris ton code pour .item:hover ici */
+        .item:hover {
+            transform: translateY(-5px); transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <h1>⚔️ Inventaire Minecraft</h1>
+    
+    <div class="conteneur">
+        <div class="item">🪓 Hache en fer</div>
+        <div class="item">⛏️ Pioche en diamant</div>
+        <div class="item">🗡️ Épée enchantée</div>
+        <div class="item">🛡️ Bouclier</div>
+        <div class="item">🏹 Arc</div>
+        <div class="item">🍖 Nourriture</div>
+    </div>
+    
+    <hr>
+    <p style="text-align: center; color: white;"><a href="exercice-09-animations.html" style="color: white;">➡️ Exercice suivant : Animations CSS</a></p>
+</body>
+</html>

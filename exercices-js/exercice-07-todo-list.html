@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 7 : Liste de tâches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+            padding: 50px;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 48px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #43e97b;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #38f9d7;
+        }
+        #listeTaches {
+            list-style: none;
+            padding: 0;
+        }
+        #listeTaches li {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        #listeTaches li:hover {
+            background-color: #e9ecef;
+        }
+        .btn-supprimer {
+            background-color: #e74c3c;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        .btn-supprimer:hover {
+            background-color: #c0392b;
+        }
+        .instructions {
+            background-color: #d4f4dd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>✅ Exercice 7 : Liste de tâches</h1>
+    
+    <div class="instructions">
+        <h3>📝 Instructions :</h3>
+        <p>1. Quand on clique sur "Ajouter", crée un nouvel élément <code>&lt;li&gt;</code></p>
+        <p>2. Ajoute le texte de la tâche dans le <code>&lt;li&gt;</code></p>
+        <p>3. Ajoute un bouton "Supprimer" dans chaque <code>&lt;li&gt;</code></p>
+        <p>4. Quand on clique sur "Supprimer", retire le <code>&lt;li&gt;</code> de la liste</p>
+        <p>5. Vide l'input après avoir ajouté une tâche</p>
+        <p><strong>Bonus :</strong> Empêche d'ajouter une tâche vide</p>
+    </div>
+    
+    <div class="container">
+        <h2 style="color: #333;">Ma liste de tâches</h2>
+        
+        <div class="input-group">
+            <input type="text" id="nouvelleTache" placeholder="Ajouter une nouvelle tâche...">
+            <button id="btnAjouter">Ajouter ➕</button>
+        </div>
+        
+        <ul id="listeTaches">
+            <!-- Les tâches apparaîtront ici -->
+        </ul>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 7 : Créer et supprimer des éléments
+        
+        OBJECTIF : Apprendre à manipuler le DOM dynamiquement
+        
+        AIDE :
+        - Créer un élément : document.createElement('li')
+        - Ajouter du texte : element.innerHTML = "texte"
+        - Ajouter à la liste : listeTaches.appendChild(element)
+        - Supprimer : element.remove()
+        - Vérifier si vide : if (texte === "" || texte.trim() === "")
+        
+        Exemple structure :
+        <li>
+            <span>Ma tâche</span>
+            <button class="btn-supprimer">Supprimer</button>
+        </li>
+        
+        Écris ton code ci-dessous :
+        */
+        
+        document.querySelector('#btnAjouter').addEventListener('click', function() {
+            // 1. Récupère le texte de l'input
+            let texte = document.querySelector('#nouvelleTache').value;
+            
+            // 2. BONUS : Vérifie que le texte n'est pas vide
+            
+            
+            // 3. Crée un nouvel élément <li>
+            
+            
+            // 4. Crée un <span> pour le texte de la tâche
+            
+            
+            // 5. Crée un bouton "Supprimer"
+            
+            
+            // 6. Quand on clique sur le bouton, supprime le <li>
+            
+            
+            // 7. Ajoute le span et le bouton au <li>
+            
+            
+            // 8. Ajoute le <li> à la liste
+            
+            
+            // 9. Vide l'input
+            document.querySelector('#nouvelleTache').value = "";
+        });
+        
+        // BONUS : Permet d'ajouter avec la touche Entrée
+        document.querySelector('#nouvelleTache').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.querySelector('#btnAjouter').click();
+            }
+        });
+        
+    </script>
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-08-chronometre.html" style="color: white;">➡️ Exercice suivant : Chronomètre</a></p>
+</body>
+</html>

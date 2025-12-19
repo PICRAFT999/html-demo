@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 9 : Animations CSS</title>
+    <style>
+        /* 🎯 EXERCICE 9 : Créer des animations
+        
+        OBJECTIF : Apprendre à animer les éléments
+        
+        INSTRUCTIONS :
+        Les animations se créent en 2 étapes :
+        1. Définir l'animation avec @keyframes
+        2. L'appliquer à un élément avec animation
+        
+        EXERCICE 1 - Faire rebondir un bloc :
+        1. Crée une animation @keyframes rebond avec :
+           0% { transform: translateY(0); }
+           50% { transform: translateY(-20px); }
+           100% { transform: translateY(0); }
+        
+        2. Applique-la à .creeper avec :
+           animation: rebond 1s infinite;
+        
+        EXERCICE 2 - Faire tourner un item :
+        1. Crée une animation @keyframes rotation avec :
+           from { transform: rotate(0deg); }
+           to { transform: rotate(360deg); }
+        
+        2. Applique-la à .diamant avec :
+           animation: rotation 3s infinite linear;
+        */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: white;
+        }
+        
+        .creeper {
+            background-color: #4CAF50;
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            animation: rebond 1s infinite;
+        }
+        
+        .diamant {
+            font-size: 80px;
+            margin: 50px;
+            display: inline-block;
+            animation: rotation 3s linear;
+        }
+        
+        /* Écris ton @keyframes rebond ici */
+        @keyframes rebond {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        /* Applique l'animation rebond au .creeper ici */
+        
+        /* Écris ton @keyframes rotation ici */
+        @keyframes rotation {
+            from { transform: rotate(0deg); }
+           to { transform: rotate(360deg); }
+        }
+        
+        /* Applique l'animation rotation au .diamant ici */
+        
+    </style>
+</head>
+<body>
+    <h1>✨ Animations Minecraft</h1>
+    
+    <div class="creeper">
+        💚
+    </div>
+    
+    <div class="diamant">💎</div>
+    <div class="diamant">💎</div>
+    <div class="diamant">💎</div>
+    
+    <hr>
+    <p style="text-align: center; color: white;"><a href="exercice-10-projet-final.html" style="color: white;">➡️ Exercice suivant : Projet final</a></p>
+</body>
+</html>

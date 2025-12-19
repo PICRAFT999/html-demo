@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 9 : Quiz interactif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            min-height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 48px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .question {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+        .question h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        .reponses {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .reponses button {
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            cursor: pointer;
+            text-align: left;
+            transition: 0.3s;
+        }
+        .reponses button:hover {
+            background-color: #e9ecef;
+            border-color: #667eea;
+        }
+        .correct {
+            background-color: #d4edda !important;
+            border-color: #28a745 !important;
+        }
+        .incorrect {
+            background-color: #f8d7da !important;
+            border-color: #dc3545 !important;
+        }
+        #resultat {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #btnVerifier {
+            display: block;
+            margin: 30px auto;
+            padding: 20px 50px;
+            font-size: 20px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        #btnVerifier:hover {
+            background-color: #764ba2;
+            transform: scale(1.05);
+        }
+        .instructions {
+            background-color: #e7e9fc;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧠 Exercice 9 : Quiz interactif</h1>
+    
+    <div class="container">
+        <div class="instructions">
+            <h3>📝 Instructions :</h3>
+            <p>1. Crée un tableau d'objets avec les questions et réponses</p>
+            <p>2. Affiche les questions et les boutons de réponses</p>
+            <p>3. Quand on clique sur une réponse, mémorise le choix</p>
+            <p>4. Au clic sur "Vérifier", compare les réponses et affiche le score</p>
+            <p>5. Colore en vert les bonnes réponses et en rouge les mauvaises</p>
+        </div>
+        
+        <div id="quiz">
+            <!-- Question 1 -->
+            <div class="question">
+                <h3>Question 1 : Quel langage est utilisé pour styliser une page web ?</h3>
+                <div class="reponses">
+                    <button data-question="1" data-reponse="A">A) JavaScript</button>
+                    <button data-question="1" data-reponse="B">B) CSS</button>
+                    <button data-question="1" data-reponse="C">C) Python</button>
+                    <button data-question="1" data-reponse="D">D) Java</button>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question">
+                <h3>Question 2 : Quelle balise HTML crée un lien ?</h3>
+                <div class="reponses">
+                    <button data-question="2" data-reponse="A">A) &lt;link&gt;</button>
+                    <button data-question="2" data-reponse="B">B) &lt;a&gt;</button>
+                    <button data-question="2" data-reponse="C">C) &lt;href&gt;</button>
+                    <button data-question="2" data-reponse="D">D) &lt;url&gt;</button>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question">
+                <h3>Question 3 : Comment sélectionner un élément avec l'ID "test" en JavaScript ?</h3>
+                <div class="reponses">
+                    <button data-question="3" data-reponse="A">A) document.querySelector('#test')</button>
+                    <button data-question="3" data-reponse="B">B) document.getElement('test')</button>
+                    <button data-question="3" data-reponse="C">C) document.select('#test')</button>
+                    <button data-question="3" data-reponse="D">D) element.find('test')</button>
+                </div>
+            </div>
+        </div>
+        
+        <button id="btnVerifier">Vérifier mes réponses ✅</button>
+        
+        <div id="resultat"></div>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 9 : Tableaux et objets
+        
+        OBJECTIF : Apprendre à utiliser les structures de données
+        
+        AIDE :
+        - Créer un objet : { question: 1, bonneReponse: "B" }
+        - Créer un tableau : let reponses = ["B", "B", "A"]
+        - Attribut HTML : element.getAttribute('data-question')
+        - Parcourir les boutons : document.querySelectorAll('.reponses button')
+        
+        Structure suggérée :
+        let bonnesReponses = {
+            "1": "B",
+            "2": "B",
+            "3": "A"
+        };
+        
+        Écris ton code ci-dessous :
+        */
+        
+        // 1. Définis les bonnes réponses
+        let bonnesReponses = {
+            "1": "B",  // CSS
+            "2": "B",  // <a>
+            "3": "A"   // querySelector
+        };
+        
+        // 2. Variable pour stocker les réponses du joueur
+        let reponsesJoueur = {};
+        
+        // 3. Ajoute des événements sur tous les boutons de réponse
+        document.querySelectorAll('.reponses button').forEach(function(bouton) {
+            bouton.addEventListener('click', function() {
+                // Récupère le numéro de question et la réponse choisie
+                let question = this.getAttribute('data-question');
+                let reponse = this.getAttribute('data-reponse');
+                
+                // Mémorise la réponse
+                reponsesJoueur[question] = reponse;
+                
+                // Retire la classe "selected" de tous les boutons de cette question
+                let boutonsQuestion = document.querySelectorAll('[data-question="' + question + '"]');
+                boutonsQuestion.forEach(function(btn) {
+                    btn.style.backgroundColor = 'white';
+                    btn.style.fontWeight = 'normal';
+                });
+                
+                // Marque ce bouton comme sélectionné
+                this.style.backgroundColor = '#e7e9fc';
+                this.style.fontWeight = 'bold';
+            });
+        });
+        
+        // 4. Bouton Vérifier
+        document.querySelector('#btnVerifier').addEventListener('click', function() {
+            // Compte les points
+            
+            
+            // Parcours chaque question et colore selon la réponse
+            
+            
+            // Affiche le résultat
+            
+        });
+        
+    </script>
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-10-mini-jeu.html" style="color: white;">➡️ Exercice suivant : Mini-jeu (Projet final)</a></p>
+</body>
+</html>

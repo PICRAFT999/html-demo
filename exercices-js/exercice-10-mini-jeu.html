@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 10 : Mini-jeu - Attrape les étoiles !</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #interface {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        #score {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        #temps {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        #zoneDejeu {
+            position: relative;
+            width: 100%;
+            height: calc(100vh - 100px);
+            margin-top: 100px;
+        }
+        .etoile {
+            position: absolute;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.1s;
+            animation: briller 1s infinite;
+        }
+        .etoile:hover {
+            transform: scale(1.2);
+        }
+        @keyframes briller {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        #gameOver {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0,0,0,0.9);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            display: none;
+        }
+        #gameOver h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        #gameOver p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        button {
+            padding: 20px 40px;
+            font-size: 20px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #764ba2;
+            transform: scale(1.05);
+        }
+        .instructions {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="interface">
+        <div id="score">⭐ Score : 0</div>
+        <div id="temps">⏱️ Temps : 30s</div>
+    </div>
+    
+    <div id="zoneDejeu"></div>
+    
+    <div class="instructions">
+        <strong>🎮 Clique sur les étoiles pour marquer des points !</strong><br>
+        Tu as 30 secondes pour attraper un maximum d'étoiles !
+    </div>
+    
+    <div id="gameOver">
+        <h2>🎉 Partie terminée !</h2>
+        <p>Ton score : <span id="scoreFinale">0</span> ⭐</p>
+        <button id="btnRejouer">Rejouer</button>
+    </div>
+    
+    <script>
+        /* 🎯 EXERCICE 10 : Projet final - Mini-jeu
+        
+        OBJECTIF : Combiner tout ce que tu as appris !
+        
+        INSTRUCTIONS :
+        1. Crée une fonction qui fait apparaître une étoile à une position aléatoire
+        2. Quand on clique sur une étoile, augmente le score et supprime l'étoile
+        3. Crée de nouvelles étoiles régulièrement (toutes les secondes)
+        4. Compte le temps restant (30 secondes)
+        5. Quand le temps est écoulé, arrête le jeu et affiche le score
+        6. Le bouton "Rejouer" redémarre la partie
+        
+        AIDE :
+        - Position aléatoire : Math.random() * largeur
+        - Créer élément : document.createElement('div')
+        - setInterval pour créer des étoiles régulièrement
+        - setTimeout ou interval pour le compte à rebours
+        
+        C'est parti ! Combine tout ce que tu as appris dans les exercices précédents !
+        */
+        
+        // Variables globales
+        let score = 0;
+        let tempsRestant = 30;
+        let intervalEtoiles = null;
+        let intervalTemps = null;
+        let jeuEnCours = false;
+        
+        // Fonction pour créer une étoile
+        function creerEtoile() {
+            // Crée l'élément
+            let etoile = document.createElement('div');
+            etoile.className = 'etoile';
+            etoile.innerHTML = '⭐';
+            
+            // Position aléatoire
+            let maxX = window.innerWidth - 50;
+            let maxY = window.innerHeight - 200;
+            etoile.style.left = Math.random() * maxX + 'px';
+            etoile.style.top = Math.random() * maxY + 'px';
+            
+            // Événement de clic
+            etoile.addEventListener('click', function() {
+                // Augmente le score
+                
+                // Met à jour l'affichage
+                
+                // Supprime l'étoile
+                
+            });
+            
+            // Ajoute à la zone de jeu
+            document.querySelector('#zoneDejeu').appendChild(etoile);
+            
+            // Supprime automatiquement après 3 secondes si pas cliquée
+            setTimeout(function() {
+                if (etoile.parentElement) {
+                    etoile.remove();
+                }
+            }, 3000);
+        }
+        
+        // Fonction pour démarrer le jeu
+        function demarrerJeu() {
+            // Réinitialise les variables
+            score = 0;
+            tempsRestant = 30;
+            jeuEnCours = true;
+            
+            // Affiche
+            document.querySelector('#score').innerHTML = '⭐ Score : 0';
+            document.querySelector('#temps').innerHTML = '⏱️ Temps : 30s';
+            document.querySelector('#gameOver').style.display = 'none';
+            
+            // Vide la zone de jeu
+            document.querySelector('#zoneDejeu').innerHTML = '';
+            
+            // Crée des étoiles toutes les 800ms
+            intervalEtoiles = setInterval(creerEtoile, 800);
+            
+            // Compte à rebours
+            intervalTemps = setInterval(function() {
+                tempsRestant--;
+                document.querySelector('#temps').innerHTML = '⏱️ Temps : ' + tempsRestant + 's';
+                
+                if (tempsRestant <= 0) {
+                    finDuJeu();
+                }
+            }, 1000);
+        }
+        
+        // Fonction pour terminer le jeu
+        function finDuJeu() {
+            // Arrête les intervals
+            clearInterval(intervalEtoiles);
+            clearInterval(intervalTemps);
+            jeuEnCours = false;
+            
+            // Affiche le game over
+            document.querySelector('#scoreFinale').innerHTML = score;
+            document.querySelector('#gameOver').style.display = 'block';
+            
+            // Supprime toutes les étoiles restantes
+            document.querySelector('#zoneDejeu').innerHTML = '';
+        }
+        
+        // Bouton Rejouer
+        document.querySelector('#btnRejouer').addEventListener('click', function() {
+            demarrerJeu();
+        });
+        
+        // Démarre le jeu au chargement
+        demarrerJeu();
+        
+    </script>
+</body>
+</html>

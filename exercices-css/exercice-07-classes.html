@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 7 : Les classes CSS</title>
+    <style>
+        /* 🎯 EXERCICE 7 : Comprendre les classes
+        
+        OBJECTIF : Apprendre à utiliser les classes pour réutiliser les styles
+        
+        INSTRUCTIONS :
+        Une classe commence par un point : .ma-classe { }
+        On l'applique dans le HTML avec : <div class="ma-classe">
+        
+        1. Crée une classe .carte avec :
+           - background-color: white;
+           - padding: 20px;
+           - margin: 10px;
+           - border-radius: 10px;
+           - box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        
+        2. Crée une classe .bloc-important avec :
+           - background-color: #ffe6e6;
+           - border-left: 5px solid red;
+           - padding: 10px;
+        
+        3. Crée une classe .bloc-info avec :
+           - background-color: #e6f3ff;
+           - border-left: 5px solid blue;
+           - padding: 10px;
+        
+        4. Crée une classe .texte-centre avec :
+           - text-align: center;
+        */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #87CEEB, #98FB98);
+            padding: 20px;
+        }
+        
+        /* Écris ta classe .carte ici */
+        .carte {
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        /* Écris ta classe .bloc-important ici */
+        .bloc-important {
+            background-color: #ffe6e6;
+            border-left: 5px solid red;
+            padding: 10px;
+        }
+        /* Écris ta classe .bloc-info ici */
+        .bloc-info {
+            background-color: #e6f3ff;background-color: #e6f3ff;
+            border-left: 5px solid blue;
+            padding: 10px;
+        }
+        /* Écris ta classe .texte-centre ici */
+         .texte-centre {
+            text-align: center;
+        }    
+        /* /* Écris ta classe */
+        
+    </style>
+</head>
+<body>
+    <h1 class="texte-centre">🏗️ Guide de Construction Minecraft</h1>
+    <div class="carte">
+        <h2>Matériaux de base</h2>
+        <div class="bloc-info">
+            <strong>Info :</strong> Le bois est le matériau le plus important au début du jeu.
+        </div>
+    </div>
+    
+    <div class="carte">
+        <h2>Conseils de survie</h2>
+        <div class="bloc-important">
+            <strong>Attention !</strong> Ne creuse jamais directement sous tes pieds, tu pourrais tomber dans la lave !
+        </div>
+    </div>
+    
+    <div class="carte">
+        <h2>Ressources rares</h2>
+        <div class="bloc-info">
+            <strong>Info :</strong> Les diamants se trouvent entre les couches 5 et 12.
+        </div>
+    </div>
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-08-flexbox.html">➡️ Exercice suivant : Flexbox</a></p>
+</body>
+</html>

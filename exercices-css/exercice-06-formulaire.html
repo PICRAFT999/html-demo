@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice 6 : Styliser un formulaire</title>
+    <style>
+        /* 🎯 EXERCICE 6 : Rendre un formulaire joli
+        
+        OBJECTIF : Apprendre à styliser les inputs et selects
+        
+        INSTRUCTIONS :
+        1. Pour les labels, ajoute :
+           - display: block;
+           - margin-top: 10px;
+           - font-weight: bold;
+        
+        2. Pour input et select, ajoute :
+           - width: 100%;
+           - padding: 8px;
+           - border: 2px solid #ccc;
+           - border-radius: 5px;
+           - font-size: 16px;
+        
+        3. Quand on clique dans un input (focus), change la bordure en bleu
+           Utilise : input:focus { border-color: blue; }
+        
+        4. Stylise le bouton avec :
+           - background-color: #4CAF50;
+           - color: white;
+           - padding: 10px 20px;
+           - border: none;
+           - border-radius: 5px;
+           - cursor: pointer;
+        */
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        /* Écris ton code pour label ici */
+        label {
+           display: block;
+           margin-top: 10px;
+           font-weight: bold;
+        }
+        /* Écris ton code pour input et select ici */
+        input {
+           width: 100%;
+           padding: 8px;
+           border: 2px solid #ccc;
+           border-radius: 5px;
+           font-size: 16px;
+           }
+        select {
+           width: 100%;
+           padding: 8px;
+           border: 2px solid #ccc;
+           border-radius: 5px;
+           font-size: 16px;
+           }
+        /* Écris ton code pour input:focus ici */
+        input:focus { border-color: blue; }
+        /* Écris ton code pour button ici */
+        button {
+           background-color: #4CAF50;
+           color: white;
+           padding: 10px 20px;
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+        }
+        /* BONUS : Ajoute un effet au survol du bouton */
+        button:hover {
+            background-color: blue;
+            transform: scale(1.05); transition: 1s;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>🎯 Inscription au serveur Minecraft</h2>
+        
+        <label>Ton pseudo :</label>
+        <input type="text" placeholder="Entre ton pseudo">
+        
+        <label>Ton niveau :</label>
+        <input type="number" min="1" max="100" placeholder="Entre ton niveau">
+        
+        <label>Choisis ton mode de jeu :</label>
+        <select>
+            <option>Survie</option>
+            <option>Créatif</option>
+            <option>Aventure</option>
+            <option>Hardcore</option>
+        </select>
+        
+        <label>Ta date de naissance :</label>
+        <input type="date">
+        
+        <br><br>
+        <button>S'inscrire</button>
+    </div>
+    
+    <hr>
+    <p style="text-align: center;"><a href="exercice-07-classes.html">➡️ Exercice suivant : Les classes CSS</a></p>
+</body>
+</html>
